@@ -2,11 +2,11 @@ import vk_api
 import time 
 import random
 
-vk = vk_api.VkApi(token = "") #Токен ВК
+vk = vk_api.VkApi(token = "сюда токен") #Токен ВК
  
-owner_id =  #ID Вк
-owner_name = "" #Ваше имя
-owner_tg = "" #Ваш ник в TG
+owner_id = 417583878 #ID Вк
+owner_name = "Влад" #Ваше имя
+owner_tg = "свой ник в тг" #Ваш ник в TG
 
 def GetDialogs():#Запрос всех диалогов
 	return vk.method("messages.getConversations")["items"]
@@ -59,6 +59,6 @@ while True:
 		time.sleep(1)
 
 	except KeyboardInterrupt:
-		print("\nСекретарь завершает свою работу") #Если бота закрыли, выводим сообщение 
+		print("\Автоответчик завершает свою работу") #Если бота закрыли, выводим сообщение 
 		vk.method("messages.send",{"random_id":0,"peer_id":owner_id,"message":"Ответил: "+str(str(Writed).replace("'","").replace("[","").replace("]",""))+"\n\nИгнор: "+str(str(blacklist).replace("'","").replace("[","").replace("]",""))}) #Отправляем последнюю версию массива себе в лс
 		break #Завершаем цикл
