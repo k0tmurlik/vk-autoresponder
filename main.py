@@ -4,8 +4,8 @@ import random
 
 vk = vk_api.VkApi(token = "сюда токен") #Токен ВК
  
-owner_id = 417583878 #ID Вк
-owner_name = "Влад" #Ваше имя
+owner_id = 11111111111 #ID Вк
+owner_name = "сюда ваше имя" #Ваше имя
 owner_tg = "свой ник в тг" #Ваш ник в TG
 
 def GetDialogs():#Запрос всех диалогов
